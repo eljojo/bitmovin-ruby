@@ -11,6 +11,8 @@ module Bitmovin::Encoding
           GcsOutput.new(item)
         when "generic_s3"
           GenericS3Output.new(item)
+        when "cdn"
+          CDNOutput.new(item)
         end
       end
       list
@@ -20,3 +22,4 @@ end
 require 'bitmovin/encoding/outputs/s3_output'
 require 'bitmovin/encoding/outputs/gcs_output'
 require 'bitmovin/encoding/outputs/generic_s3_output'
+require 'bitmovin/encoding/outputs/cdn_output'
